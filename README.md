@@ -24,7 +24,7 @@ research. Munin fixes that **without uploading your files to a service we run**:
 - 🛡️ **Read-only to the AI, permission-aware by design.** Your assistant can *read* your
   memory but cannot change or delete it — the foundation for safe team and company use.
 
-## Privacy & security — the honest version
+## Privacy & security — the honest version.
 
 Munin is built so your files can stay on your machine. There are **two** separate places an
 AI model is used, with different privacy implications — be clear about both:
