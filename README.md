@@ -135,7 +135,7 @@ Munin reads your files, splits them into passages, and stores them locally (Post
 returns the most relevant, permission-filtered, **cited** passages; your AI answers from
 *those* — not from guesswork.
 
-## What it's not (yet)
+## What it's not (yet).
 
 - It's a **CLI + MCP server** — there's no graphical app yet; your AI client is the UI. A
   visual "see your knowledge" hub is on the roadmap.
