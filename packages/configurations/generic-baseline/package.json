@@ -1,0 +1,27 @@
+{
+  "name": "@muninhq/config-generic-baseline",
+  "version": "0.1.0",
+  "private": false,
+  "license": "AGPL-3.0-only",
+  "description": "Munin neutral product-default configuration cartridge — part of the open-core local product. The hosted/managed product and the verticals are separate and closed.",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "files": ["dist", "LICENSE", "README.md"],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json && node ../../../scripts/esm-fix.mjs",
+    "prepack": "pnpm run build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --passWithNoTests"
+  },
+  "publishConfig": {
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts"
+  },
+  "dependencies": {
+    "@muninhq/shared": "workspace:*"
+  }
+}

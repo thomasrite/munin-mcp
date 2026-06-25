@@ -1,0 +1,46 @@
+{
+  "name": "@muninhq/mcp",
+  "version": "0.1.0",
+  "private": false,
+  "license": "AGPL-3.0-only",
+  "description": "Local stdio MCP server over the Munin engine — your machine, your keys, your choice of provider. Part of the open-core local product; the hosted/managed product and the verticals are separate and closed.",
+  "type": "module",
+  "bin": {
+    "munin-mcp": "./src/main.ts"
+  },
+  "files": ["dist", "LICENSE", "README.md"],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json && node ../../scripts/esm-fix.mjs",
+    "prepack": "pnpm run build",
+    "typecheck": "tsc --noEmit",
+    "test": "pnpm test:unit && pnpm test:int",
+    "test:unit": "vitest run --passWithNoTests",
+    "test:int": "vitest run --config vitest.int.config.ts --passWithNoTests",
+    "start": "tsx src/main.ts"
+  },
+  "publishConfig": {
+    "bin": {
+      "munin-mcp": "./dist/main.js"
+    }
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "@muninhq/config-personal": "workspace:*",
+    "@muninhq/engine": "workspace:*",
+    "@muninhq/shared": "workspace:*",
+    "dotenv": "^16.4.5",
+    "pino": "^9.0.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "munin-mcp": "workspace:*",
+    "@muninhq/config-generic-demo": "workspace:*",
+    "@testcontainers/postgresql": "^12.0.0",
+    "testcontainers": "^12.0.0",
+    "tsx": "^4.19.2",
+    "vitest": "^4.1.7"
+  }
+}

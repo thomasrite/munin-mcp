@@ -1,0 +1,109 @@
+{
+  "name": "@muninhq/engine",
+  "version": "0.1.0",
+  "private": false,
+  "license": "AGPL-3.0-only",
+  "description": "Munin engine — the vertical-agnostic memory-layer core (ingest, embed, extract, graph, query) for the open-core local product. The hosted/managed product and the verticals are separate and closed.",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./ingest/extensions": "./src/ingest/parsers/code-extensions.ts",
+    "./query": "./src/query/index.ts",
+    "./extract": "./src/extract/index.ts",
+    "./connectors": "./src/connectors/index.ts",
+    "./jobs": "./src/jobs/index.ts",
+    "./cost": "./src/cost/index.ts",
+    "./graph-store": "./src/graph/graph-store-factory.ts",
+    "./db/schema": "./src/db/schema/index.ts",
+    "./db/migrate": "./src/db/migrate.ts"
+  },
+  "files": ["dist", "LICENSE", "README.md"],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\" && tsc -p tsconfig.build.json && node ../../scripts/esm-fix.mjs && node ./scripts/copy-migrations.mjs",
+    "prepack": "pnpm run build",
+    "typecheck": "tsc --noEmit",
+    "test": "pnpm test:unit && pnpm test:int",
+    "test:unit": "vitest run --passWithNoTests",
+    "test:int": "vitest run --config vitest.int.config.ts --passWithNoTests",
+    "test:providers": "vitest run --config vitest.providers.config.ts",
+    "embed:benchmark": "tsx src/embeddings/benchmark.ts",
+    "db:generate": "drizzle-kit generate"
+  },
+  "publishConfig": {
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+      ".": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "./ingest/extensions": {
+        "types": "./dist/ingest/parsers/code-extensions.d.ts",
+        "default": "./dist/ingest/parsers/code-extensions.js"
+      },
+      "./query": {
+        "types": "./dist/query/index.d.ts",
+        "default": "./dist/query/index.js"
+      },
+      "./extract": {
+        "types": "./dist/extract/index.d.ts",
+        "default": "./dist/extract/index.js"
+      },
+      "./connectors": {
+        "types": "./dist/connectors/index.d.ts",
+        "default": "./dist/connectors/index.js"
+      },
+      "./jobs": {
+        "types": "./dist/jobs/index.d.ts",
+        "default": "./dist/jobs/index.js"
+      },
+      "./cost": {
+        "types": "./dist/cost/index.d.ts",
+        "default": "./dist/cost/index.js"
+      },
+      "./graph-store": {
+        "types": "./dist/graph/graph-store-factory.d.ts",
+        "default": "./dist/graph/graph-store-factory.js"
+      },
+      "./db/schema": {
+        "types": "./dist/db/schema/index.d.ts",
+        "default": "./dist/db/schema/index.js"
+      },
+      "./db/migrate": {
+        "types": "./dist/db/migrate.d.ts",
+        "default": "./dist/db/migrate.js"
+      }
+    }
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.97.1",
+    "@aws-sdk/client-bedrock-runtime": "^3.1060.0",
+    "@azure/identity": "^4.13.1",
+    "@azure/storage-blob": "^12.25.0",
+    "@electric-sql/pglite": "^0.5.1",
+    "@electric-sql/pglite-pgvector": "^0.0.2",
+    "@muninhq/shared": "workspace:*",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "drizzle-orm": "^0.45.2",
+    "graphile-worker": "^0.16.6",
+    "mammoth": "^1.8.0",
+    "openai": "^6.39.0",
+    "postgres": "^3.4.5",
+    "undici": "^8.4.1",
+    "unpdf": "^0.12.1"
+  },
+  "devDependencies": {
+    "@testcontainers/postgresql": "^12.0.0",
+    "dotenv": "^16.4.5",
+    "drizzle-kit": "^0.31.10",
+    "testcontainers": "^12.0.0",
+    "tsx": "^4.19.2",
+    "vitest": "^4.1.7"
+  }
+}

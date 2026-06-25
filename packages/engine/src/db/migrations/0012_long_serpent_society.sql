@@ -1,0 +1,1 @@
+ALTER TABLE "tenant_settings" ADD COLUMN "config_cartridge_id" text;

@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "composite": false,
+    "noEmit": false,
+    "sourceMap": false
+  },
+  "exclude": ["**/*.test.ts", "**/*.test.tsx", "src/test-fixtures.ts", "node_modules", "dist"]
+}

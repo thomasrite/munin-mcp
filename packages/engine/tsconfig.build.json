@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "composite": false,
+    "noEmit": false,
+    "sourceMap": false
+  },
+  "exclude": [
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "src/permissions/**/*.test-helper.ts",
+    "src/test-support/**",
+    "src/query/adversarial/**",
+    "node_modules",
+    "dist"
+  ]
+}

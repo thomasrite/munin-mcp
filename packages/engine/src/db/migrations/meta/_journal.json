@@ -1,0 +1,125 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1779281185305,
+      "tag": "0000_useful_union_jack",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1779284000000,
+      "tag": "0001_embedding_triggers",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1779293000000,
+      "tag": "0002_paragraph_structure",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1779296000000,
+      "tag": "0003_llm_calls_purpose_document",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1779567141242,
+      "tag": "0004_black_forgotten_one",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1779606681374,
+      "tag": "0005_exotic_gravity",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1779706571239,
+      "tag": "0006_special_hammerhead",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1779721252343,
+      "tag": "0007_empty_harrier",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1780144821294,
+      "tag": "0008_modern_oracle",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1780158865742,
+      "tag": "0009_spicy_iron_fist",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1780317411996,
+      "tag": "0010_solid_zzzax",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "7",
+      "when": 1780946237241,
+      "tag": "0011_sweet_the_stranger",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "7",
+      "when": 1780995600438,
+      "tag": "0012_long_serpent_society",
+      "breakpoints": true
+    },
+    {
+      "idx": 13,
+      "version": "7",
+      "when": 1781000559157,
+      "tag": "0013_previous_lockheed",
+      "breakpoints": true
+    },
+    {
+      "idx": 14,
+      "version": "7",
+      "when": 1781017349765,
+      "tag": "0014_certain_norman_osborn",
+      "breakpoints": true
+    },
+    {
+      "idx": 15,
+      "version": "7",
+      "when": 1781117790466,
+      "tag": "0015_talented_spirit",
+      "breakpoints": true
+    },
+    {
+      "idx": 16,
+      "version": "7",
+      "when": 1781691048604,
+      "tag": "0016_mute_arclight",
+      "breakpoints": true
+    }
+  ]
+}

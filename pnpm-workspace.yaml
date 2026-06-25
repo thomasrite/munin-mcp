@@ -1,0 +1,9 @@
+packages:
+  - "packages/shared"
+  - "packages/engine"
+  - "packages/connectors/filesystem"
+  - "packages/configurations/generic-baseline"
+  - "packages/configurations/personal"
+  - "packages/configurations/generic-demo"
+  - "packages/cli"
+  - "packages/mcp"

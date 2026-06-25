@@ -1,0 +1,21 @@
+node_modules
+dist
+.turbo
+coverage
+*.log
+.env
+.env.*
+!.env.example
+.DS_Store
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea
+*.tsbuildinfo
+.pnpm-store
+.data
+.data/
+# Fully-local runtime data (PGlite store + encrypted blobs). Never commit a
+# user's local memory.
+.munin-local/
+MUNIN_HOME/

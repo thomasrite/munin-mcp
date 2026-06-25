@@ -1,0 +1,5 @@
+Beacon status update — 29 March 2026
+
+The support-request flow is underway. Marcus Webb has built the backend API for raising and tracking requests, and David Olsen is writing acceptance tests against it.
+
+Tom Okafor flagged one risk: the email-notification provider has a rate limit that may not cope with peak load. Investigating a batching approach. This is a medium-priority task with no owner yet.

@@ -1,0 +1,59 @@
+{
+  "name": "munin-mcp",
+  "version": "0.1.0",
+  "private": false,
+  "license": "AGPL-3.0-only",
+  "description": "Munin local CLI — `munin` one-command bootstrap, ingest, extract and MCP wiring for the open-core local product. The hosted/managed product and the verticals are separate and closed.",
+  "type": "module",
+  "bin": {
+    "munin": "./src/munin-cli.ts"
+  },
+  "files": ["dist", "LICENSE", "README.md"],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json && node ../../scripts/esm-fix.mjs",
+    "prepack": "pnpm run build",
+    "typecheck": "tsc --noEmit",
+    "test": "pnpm test:unit && pnpm test:int",
+    "test:unit": "vitest run --passWithNoTests",
+    "test:int": "vitest run --config vitest.int.config.ts --passWithNoTests",
+    "test:providers": "vitest run --config vitest.providers.config.ts",
+    "ingest": "tsx src/ingest-cli.ts",
+    "munin": "tsx src/munin-cli.ts",
+    "local:init": "tsx src/local-init-cli.ts",
+    "worker": "tsx src/worker-cli.ts",
+    "migrate": "tsx src/migrate-cli.ts",
+    "extract": "tsx src/extract-cli.ts",
+    "extract:status": "tsx src/extract-cli.ts status",
+    "cache:report": "tsx src/cache-report-cli.ts",
+    "residency:report": "tsx src/residency-report-cli.ts",
+    "retention:sweep": "tsx src/retention-sweep-cli.ts",
+    "query": "tsx src/query-cli.ts",
+    "tenancy:seed": "tsx src/tenancy-seed-cli.ts"
+  },
+  "publishConfig": {
+    "bin": {
+      "munin": "./dist/munin-cli.js"
+    }
+  },
+  "dependencies": {
+    "@muninhq/config-personal": "workspace:*",
+    "@muninhq/connector-filesystem": "workspace:*",
+    "@muninhq/engine": "workspace:*",
+    "@muninhq/mcp": "workspace:*",
+    "@muninhq/shared": "workspace:*",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.45.2",
+    "graphile-worker": "^0.16.6",
+    "postgres": "^3.4.5"
+  },
+  "devDependencies": {
+    "@muninhq/config-generic-demo": "workspace:*",
+    "@testcontainers/postgresql": "^12.0.0",
+    "testcontainers": "^12.0.0",
+    "tsx": "^4.19.2",
+    "vitest": "^4.1.7"
+  }
+}

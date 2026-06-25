@@ -1,0 +1,4 @@
+DROP INDEX "group_role_bindings_unique_idx";--> statement-breakpoint
+CREATE UNIQUE INDEX "group_role_bindings_unscoped_unique_idx" ON "group_role_bindings" USING btree ("tenant_id","subject_kind","subject_id","role_name") WHERE deleted_at IS NULL AND scope_org_unit_id IS NULL;--> statement-breakpoint
+CREATE UNIQUE INDEX "group_role_bindings_scoped_unique_idx" ON "group_role_bindings" USING btree ("tenant_id","subject_kind","subject_id","role_name","scope_org_unit_id") WHERE deleted_at IS NULL AND scope_org_unit_id IS NOT NULL;--> statement-breakpoint
+CREATE UNIQUE INDEX "user_unit_assignments_unique_idx" ON "user_unit_assignments" USING btree ("tenant_id","actor_oid","org_unit_id") WHERE deleted_at IS NULL;

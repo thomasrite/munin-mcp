@@ -1,0 +1,27 @@
+Munin — open-core licensing notice
+==================================
+
+Munin is developed as OPEN CORE. The local product — what a single user runs on
+their own machine (drag documents in, build a local knowledge graph with PGlite +
+filesystem blobs + a local or bring-your-own-key model, and talk to it from your
+own LLM client over the stdio MCP server) — is released as free and open source
+under the GNU Affero General Public License v3.0 only (AGPL-3.0-only). The full
+licence text is in the LICENSE file at the repository root.
+
+The hosted / managed product, team and device-sync features, brokered LLM access,
+and the vertical configurations are a SEPARATE, CLOSED commercial product. They
+are NOT licensed under the AGPL and are not part of this open-core repository.
+
+This repository contains exactly the open-core packages, each carrying
+"license": "AGPL-3.0-only" in its package.json and a copy of the LICENSE file:
+
+    @muninhq/engine                  packages/engine
+    @muninhq/shared                  packages/shared
+    munin-mcp                        packages/cli
+    @muninhq/mcp                     packages/mcp
+    @muninhq/config-generic-baseline packages/configurations/generic-baseline
+    @muninhq/config-personal         packages/configurations/personal
+    @muninhq/config-generic-demo     packages/configurations/generic-demo
+    @muninhq/connector-filesystem    packages/connectors/filesystem
+
+Copyright (c) Munin contributors.
