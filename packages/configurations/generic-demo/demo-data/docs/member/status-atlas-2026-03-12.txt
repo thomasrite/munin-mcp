@@ -1,0 +1,7 @@
+Atlas status update — 12 March 2026
+
+Sarah Chen reports that the data-modelling workstream is on track. Priya Anand finished the dimensional model for the sales domain this week and has started on the finance domain.
+
+The extraction connectors are slightly behind: Marcus Webb is still working on the connector for the legacy Oracle source, which he now expects to finish by 20 March. This task is currently blocking the QA team and is high priority.
+
+No major risks to the September delivery date at this point.

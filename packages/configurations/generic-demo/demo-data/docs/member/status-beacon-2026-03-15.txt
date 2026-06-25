@@ -1,0 +1,5 @@
+Beacon status update — 15 March 2026
+
+Tom Okafor reports that the account-management screens are feature-complete and in review. David Olsen has written the first pass of the regression test suite and found two medium-severity defects, both now fixed.
+
+The support-request flow is the next major piece of work. It is in progress and Tom expects it to take most of April.

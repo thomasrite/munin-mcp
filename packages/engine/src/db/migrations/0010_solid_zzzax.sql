@@ -1,0 +1,1 @@
+ALTER TYPE "public"."llm_call_purpose" ADD VALUE 'generation' BEFORE 'other';

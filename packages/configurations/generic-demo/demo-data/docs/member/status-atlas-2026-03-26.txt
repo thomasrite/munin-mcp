@@ -1,0 +1,7 @@
+Atlas status update — 26 March 2026
+
+Good progress this fortnight. Marcus Webb completed the Oracle extraction connector on schedule, so the QA team is unblocked.
+
+Sarah Chen has begun planning the cutover from the legacy reporting database. Priya Anand is now validating the finance-domain model against last year's audited figures.
+
+One new task: someone needs to write the cutover runbook before the September go-live. Sarah has taken this on herself for now.

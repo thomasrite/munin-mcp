@@ -1,0 +1,5 @@
+Onboarding note — Priya Anand
+
+Priya Anand joined as a senior data engineer on the platform team. Her email is priya.anand@example.com.
+
+She is assigned to the Atlas project, where she leads the data-modelling workstream under Sarah Chen. Her first deliverable is the sales-domain dimensional model.

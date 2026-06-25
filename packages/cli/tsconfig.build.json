@@ -1,0 +1,21 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "composite": false,
+    "noEmit": false,
+    "sourceMap": false
+  },
+  "exclude": [
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "node_modules",
+    "dist",
+    "src/eval/**",
+    "src/hr-eval-cli.ts",
+    "src/faithfulness-eval-cli.ts",
+    "src/exp-b-false-merge-cli.ts",
+    "src/exp-c-confidence-cli.ts",
+    "src/config-overlay-seed-cli.ts",
+    "src/dept-access-seed-cli.ts"
+  ]
+}
